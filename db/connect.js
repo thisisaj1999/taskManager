@@ -1,8 +1,5 @@
 const mongoose = require('mongoose');
 
-const connectionString =
-  'mongodb+srv://Atul:6199@nodeexpressprojects.vniqudy.mongodb.net/TASK-MANAGER?retryWrites=true&w=majority';
-
 /*
 to remove the warnings
     useNewUrlParser: true,
@@ -12,7 +9,7 @@ to remove the warnings
 */
 
 const connectDB = (url) => {
-  return mongoose.connect(connectionString, {
+  return mongoose.connect(url, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
